@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo de Cor pra Você</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header class="caixa">
+        <nav>
+            <h1 class="titulo-principal">Tudo de Cor pra Você</h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="calculadora.html">CALCULADORA</a></li>
+                <li><a href="contatos.html">CONTATOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <h2 class="banner__titulo">Já encontrou o que você precisa?</h2>
+        <p class="banner__texto">O que você precisa nós temos!</p>
+        <input type="search" class="banner__pesquisa" placeholder="O que você está procurando?">
+    </section>
+        
+        <section>
+            
+            <main>
+                <form id="form-adiciona">
+                    <div class="container">
+                        <!--
+                        <label for="corDaTinta">Cor da Tinta:</label>
+                        <input type="text" name="corDaTinta" id="corDaTinta" class="input">
+                         -->   
+                        <label for="janelaParede1">Janelas:</label>
+                        <input type="number" name="janela" id="janela" class="input">
+                    
+                        <label for="PortasParede1">Portas:</label>
+                        <input type="number" name="porta" id="porta" class="input">
+                        
+                        <label for="alturaPararede1">Altura 1° parede</label>
+                        <input type="number" name="alturaParede1" id="altura-parede1" class="input">
+
+                        <label for="LarguraPararede1">largura 1° parede</label>
+                        <input type="number" name="larguraParede1" id="largura-parede1" class="input">
+
+                        <label for="alturaPararede2">Altura 2° parede</label>
+                        <input type="number" name="alturaParede2" id="altura-parede2" class="input">
+
+                        <label for="LarguraPararede2">largura 2° parede</label>
+                        <input type="number" name="larguraParede2" id="largura-parede2" class="input">
+
+                        <label for="alturaPararede3">Altura 3° parede</label>
+                        <input type="number" name="alturaParede3" id="altura-parede3" class="input">
+
+                        <label for="LarguraPararede3">largura 3° parede</label>
+                        <input type="number" name="larguraParede3" id="largura-parede3" class="input">
+
+                        <label for="alturaPararede4">Altura 4° parede</label>
+                        <input type="number" name="alturaParede4" id="altura-parede4" class="input">
+
+                        <label for="LarguraPararede2">largura 4° parede</label>
+                        <input type="number" name="larguraParede4" id="largura-parede4" class="input">
+
+                        <div class="result" id="resultado"></div>
+                        <div class="result" id="resultado1"></div>
+                        <div class="result" id="resultado2"></div>
+                        <div class="result" id="resultado3"></div>    
+                        <div class="result" id="resultado4"></div>    
+                        
+                            
+                            
+                        
+                        
+                    </div>   
+                    <!--
+                    <div class="container">
+                        <label for="janela">Janelas:</label>
+                        <input type="number" name="janela" id="janela" class="input">
+                    
+                        <label for="Portas">Portas:</label>
+                        <input type="number" name="porta" id="porta" class="input">
+
+                        <label for="alturaPararede2">Altura 2° parede</label>
+                        <input type="number" name="alturaParede2" id="altura-parede1" class="input">
+
+                        <label for="LarguraPararede2">largura 2° parede</label>
+                        <input type="number" name="larguraParede2" id="largura-parede2" class="input">
+                    </div>
+                        
+                    <div class="container">
+                        <label for="janela">Janelas:</label>
+                        <input type="number" name="janela" id="janela" class="input">
+                    
+                        <label for="Portas">Portas:</label>
+                        <input type="number" name="porta" id="porta" class="input">
+
+                        <label for="pararede3">3° Parede</label>
+                        <input type="number" id="pararede3" class="input">
+                    </div>
+                    <div class="container">
+                    <label for="janela">Janelas:</label>
+                        <input type="number" name="janela" id="janela" class="input">
+                    
+                        <label for="Portas">Portas:</label>
+                        <input type="number" name="porta" id="porta" class="input">
+
+                        <label for="pararede4">4° Parede</label>
+                        <input type="number" id="pararede4" class="input">
+                    </div>
+                    -->
+                    <div class="botao">
+                        <button onclick="calculaAreaParede()" id="calcular" class="botao-calcular">Calcular</button>
+                    </div>
+
+                    
+                     
+                </form>
+            </main>
+        </section>
+     <footer>
+        <h1>Fazendo a Vida mais Colorida para Você</h1>
+    </footer>
+    <script src="./js/calculadoraTeste.js"></script>
+</body>
+</html>

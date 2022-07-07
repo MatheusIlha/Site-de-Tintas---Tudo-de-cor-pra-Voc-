@@ -1,0 +1,49 @@
+
+form {
+    width: 80%;
+    margin: 40px 0;
+    
+    border-radius: 1em;
+}
+
+.contatos {
+    width: 80%;
+    display: flex;
+    margin-left: 15%;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 25px;
+    margin: 0 10px 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 20px 10px;
+    padding: 5px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2);
+}

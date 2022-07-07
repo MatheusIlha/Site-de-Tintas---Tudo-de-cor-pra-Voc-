@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo de Cor pra Você</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header class="caixa">
+        <nav>
+            <h1 class="titulo-principal">Tudo de Cor pra Você</h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="calculadora.html">CALCULADORA</a></li>
+                <li><a href="contatos.html">CONTATOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2 class="banner__titulo">Já encontrou o que você precisa?</h2>
+        <p class="banner__texto">O que você precisa nós temos!</p>
+        <input type="search" class="banner__pesquisa" placeholder="O que você está procurando?">
+    </section>
+  
+        <section>
+            
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/cor5.jpg" alt="Los Angeles" width="1100" height="500">
+                    <div class="carousel-caption">
+                    </div>   
+                </div>
+                <div class="carousel-item">
+                    <img src="img/cor7.jpg" alt="Chicago" width="1100" height="500">
+                    <div class="carousel-caption">
+                    </div>   
+                </div>
+                <div class="carousel-item">
+                    <img src="img/cor3.jpg" alt="New York" width="1100" height="500">
+                    <div class="carousel-caption">
+                    </div>   
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+            <main>
+                
+                <div class="contatos">
+                <form>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" class="input-padrao" required>
+                    <span class="input-mensagem-erro">Este campo não está válido</span>
+        
+                    <label for="email"> Email</label>
+                    <input type="email" id="email" onkeyup="mini()" class="input-padrao" placeholder="email@dominio.com" required>
+        
+                    <label for="telefone"> Telefone</label>
+                    <input type="tel" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX" required>
+
+                    <label for="senha"> Senha</label>
+                    <input type="password" id="senha" class="input-padrao" placeholder="Digite uma Senha" 
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                    title="A Senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula,
+                        um número e não pondendo conter caracteres especiais" required>
+
+                    <label for="nascimento"> Data de Nascimento</label>
+                    <input type="date" id="senha" class="input-padrao" placeholder="Digite uma Senha" required>
+                    
+                    <label for="mansagem"> Mensagem </label>
+                    <textarea id="mensagem" cols="65" rows="10" class="input-padrao"></textarea>
+        
+                    <fieldset>
+                        <legend> Como Prefere o nosso Conatato </legend>
+                        <label for="radio-email"> <input type="radio" name="contato" 
+                               value="email" id="radio-email"> Email</label>
+                        
+                        <label for="radio-telefone"><input type="radio" name="contato" 
+                            value="telefone" id="radio-telefone"> Telefone </label>
+                        
+                        <label for="radio-whatsapp"><input type="radio" name="contato" 
+                               value="whatsapp" id="radio-whatsapp" checked> Whats App</label>     
+                        </fieldset>   
+                    
+                    <fieldset>
+                        <legend>Qual o Horário prefere ser Atendido?</legend>
+                        <select name="" id="">
+                            <option value="">Manhã</option>
+                            <option value="">Tarde</option>
+                            <option value="">Noite</option>
+                        </select>
+                    </fieldset>
+        
+                    <label class="checkbox"><input type="checkbox" checked> Gostaria de Receber nossas Novidades por Email? </label>
+        
+                    <input type="submit" value="Enviar formulário" class="enviar">
+                </form>
+            </div>
+    
+        <footer>
+            <h1>Fazendo a Vida mais Colorida para Você</h1>
+        </footer>
+    <script src="./js/validaCadastro.js"></script>
+    <script src="./js/calculadora.js"></script>
+</body>
+</html>

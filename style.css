@@ -1,0 +1,71 @@
+@import url("styles/calculadora.css");
+@import url("styles/banner.css");
+@import url("styles/contatos.css");
+
+:root {
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+}
+
+body {
+    background: #E0FFFF;
+}
+
+.caixa {
+    background: linear-gradient(to right,yellow,orange,pink,rgb(161, 30, 161),rgb(56, 197, 202),green);
+    padding: 5%;
+}
+
+.titulo-principal {
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: var(--fonte-principal);
+    margin: auto 15px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: auto 15px;
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: var(--fonte-principal);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    height: 400px;
+  }
+
+  .video {
+    text-align: center;
+    padding: 5% 0 5% 0 ;
+  }
+
+footer {
+    background: linear-gradient(to right,yellow,orange,pink,rgb(161, 30, 161),rgb(56, 197, 202),green);
+    text-align: center;
+    padding: 3%;
+}
