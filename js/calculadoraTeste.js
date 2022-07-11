@@ -33,11 +33,9 @@ botaoCalcular.addEventListener("click", function(e){
     largura1 = parseFloat(larguraDigitada);
     if(isNaN(altura1)&&(largura1))
     {
-      console.log("não é valor OK") 
-            
+      console.log("não é valor OK")      
     }
-    else
-    {
+    else{
       console.log("OK")
       validaParedeAltura1(altura1)
       validaParedeLargura1(largura1)
@@ -75,7 +73,7 @@ function validaParedeLargura1() {
 }
 
 function calculaAreaParede() {
-    
+    //Busca as informações no form do HTML
     var form = document.querySelector("#form-adiciona");
     
     var campoJanela = form.janela.value;
@@ -93,6 +91,30 @@ function calculaAreaParede() {
     var campoAlturaParede4 = form.alturaParede4.value
     var campoLarguraParede4 = form.larguraParede4.value
     
+    
+    alturaParede1 = parseFloat(campoAlturaParede1);
+    larguraParede1 = parseFloat(campoLarguraParede1);
+
+    alturaParede2 = parseFloat(campoAlturaParede2);
+    larguraParede2 = parseFloat(campoAlturaParede2);
+
+    alturaParede3 = parseFloat(campoAlturaParede3);
+    larguraParede3 = parseFloat(campoAlturaParede3);
+
+    alturaParede4 = parseFloat(campoAlturaParede4);
+    larguraParede4 = parseFloat(campoAlturaParede4);
+    
+    // Condicional Altura e largura da Parede
+    if(alturaParede1 < 1 && larguraParede1 < 1 || alturaParede1 > 7 && larguraParede1 > 7){
+        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+    }if(alturaParede2 < 1 && larguraParede2 < 1 && alturaParede2 > 7 && larguraParede2 > 7){
+        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+    }if(alturaParede3 < 1 && larguraParede2 < 1 && alturaParede3 > 7 && larguraParede2 > 7){
+        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+    }if(alturaParede4 < 1 && larguraParede2 < 1 && alturaParede4 > 7 && larguraParede2 > 7){
+        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+    }else {
+    // Variaveis que buscam o Resultado do HTML
     var resultado = document.getElementById("resultado");
     var resultado1 = document.getElementById("resultado1");
     var resultado2 = document.getElementById("resultado2");
@@ -100,7 +122,7 @@ function calculaAreaParede() {
     var resultado4 = document.getElementById("resultado4");
     
     
-
+        // Claculo em m²
         var totalJanela = campoJanela * janela;
         var totalPorta = campoPorta * porta;
         var totalAberturas = (totalJanela + totalPorta).toFixed(2);
@@ -141,18 +163,8 @@ function calculaAreaParede() {
         resultado2.textContent = `Você precisará de ${lata3_6Litros} Lata(s) de 3,6 Litros`;
         resultado3.textContent = `Você precisará de ${lata2_5Litros} Lata(s) de 2,5 Litros`;
         resultado4.textContent = `Você precisará de ${lata0_5Litros} Lata(s) de 0,5 Litros`;
-        
-        // A area total de Pintura é ${areaTotalPintura}
-        //A quantidade de Latas de Tintas de 18L é ${lata18Litros}
-        //A quantidade de Latas de Tintas de 3,6L é ${lata3_6Litros}
-        //A quantidade de Latas de Tintas de 2,5L é ${lata2_5Litros}
-        //A quantidade de Latas de Tintas de 0,5L é ${lata0_5Litros}`;
-        
-
-         
-
-         
-    }    
+    }     
+}    
 
 
 /*
