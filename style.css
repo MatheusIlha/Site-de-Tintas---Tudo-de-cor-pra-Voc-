@@ -68,4 +68,6 @@ footer {
     background: linear-gradient(to right,yellow,orange,pink,rgb(161, 30, 161),rgb(56, 197, 202),green);
     text-align: center;
     padding: 3%;
+    font-size: 40px;
+    font-family: var(--fonte-principal);
 }

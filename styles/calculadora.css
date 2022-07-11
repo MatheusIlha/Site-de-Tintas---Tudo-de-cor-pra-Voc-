@@ -20,7 +20,7 @@ form label, form {
 
 form label, .input {
     padding: 2%;
-    margin: 5% 25%;
+    margin: 1% 25%;
 }
 
 .botao-calcular {
@@ -57,4 +57,15 @@ form label, .input {
     user-select: none;
     font-size: 30px;
     font-weight: bold;
+}
+
+.mensagem-erro {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 33%;
+    visibility: hidden;
+}
+
+.botao {
+    visibility: hidden;
 }

@@ -5,6 +5,74 @@ var lata3_6Litros = 0;
 var lata2_5Litros = 0;
 var lata0_5Litros = 0;
 var areaTotalPintura = 0;
+var altura1;
+var largura1;
+
+/*
+if(validadores[tipoDeInput]) {
+    validadores[tipoDeInput](input)
+}
+if(input.validity.valid) {
+    input.parentElement.classList.remove('input-container--invalido')
+    input.parentElement.querySelector('.mensagem-erro').innerHTML = ''
+} else {
+    input.parentElement.classList.add('input-container--invalido')
+    input.parentElement.querySelector('.mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input)
+}
+*/
+
+var botaoCalcular = document.querySelector("#calcular");
+botaoCalcular.addEventListener("click", function(e){
+    e.preventDefault(); 
+
+    var form1 = document.querySelector("#form-adiciona");
+
+    var alturaDigitada = form1.alturaParede1.value
+    altura1 = parseFloat(alturaDigitada);
+    var larguraDigitada = form1.larguraParede1.value
+    largura1 = parseFloat(larguraDigitada);
+    if(isNaN(altura1)&&(largura1))
+    {
+      console.log("não é valor OK") 
+            
+    }
+    else
+    {
+      console.log("OK")
+      validaParedeAltura1(altura1)
+      validaParedeLargura1(largura1)
+      //calculaArea(area);
+    }
+        console.log(altura1);
+        console.log(largura1);
+        //console.log(area);
+})
+
+function validaParedeAltura1() {
+    var e1
+    if(altura1 < 0){
+        e1 = "Altura menor que 0"
+        //return false;
+    } else {
+        e1 = "Altura maior que 0"
+        //return true;
+    }
+
+    console.log(e1);
+}
+
+function validaParedeLargura1() {
+    var e1
+    if(largura1 < 0){
+        e1 = "Largura menor que 0"
+        //return false;
+    } else {
+        e1 = "Largura maior que 0"
+        //return true;
+    }
+
+    console.log(e1);
+}
 
 function calculaAreaParede() {
     
@@ -24,15 +92,14 @@ function calculaAreaParede() {
 
     var campoAlturaParede4 = form.alturaParede4.value
     var campoLarguraParede4 = form.larguraParede4.value
+    
     var resultado = document.getElementById("resultado");
     var resultado1 = document.getElementById("resultado1");
     var resultado2 = document.getElementById("resultado2");
     var resultado3 = document.getElementById("resultado3");
     var resultado4 = document.getElementById("resultado4");
     
-    //if(janela !== " " && porta !== " " && alturaParede1 !== " " && larguraParede1 !== " " && 
-    //alturaParede2 !== " " && larguraParede2 !== " " && alturaParede3 !== " " && larguraParede3 !== " " && 
-    //alturaParede4 !== " " && larguraParede4 !== " ") {
+    
 
         var totalJanela = campoJanela * janela;
         var totalPorta = campoPorta * porta;
@@ -45,7 +112,7 @@ function calculaAreaParede() {
         var areaTotalPintura = (totalDas4Paredes - totalAberturas).toFixed(2);
         var quantidadeDeTinta = areaTotalPintura / 5;
         const totalTinta = quantidadeDeTinta.toFixed(2);
-
+        
          while(quantidadeDeTinta > 0){
             if(quantidadeDeTinta  >= 18){
                 lata18Litros++;
@@ -87,13 +154,14 @@ function calculaAreaParede() {
          
     }    
 
-    
 
-
-
-var botaoCalcular = document.querySelector("#calcular");
-
+/*
 botaoCalcular.addEventListener("click", function(event){
      event.preventDefault();  
-});
 
+     if(validaEntrada == true){
+     console.log("Verificado o Numero");
+    }
+
+});
+*/
