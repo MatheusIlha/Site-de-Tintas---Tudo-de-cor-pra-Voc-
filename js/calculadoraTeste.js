@@ -104,16 +104,7 @@ function calculaAreaParede() {
     alturaParede4 = parseFloat(campoAlturaParede4);
     larguraParede4 = parseFloat(campoAlturaParede4);
     
-    // Condicional Altura e largura da Parede
-    if(alturaParede1 < 1 && larguraParede1 < 1 || alturaParede1 > 7 && larguraParede1 > 7){
-        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-    }if(alturaParede2 < 1 && larguraParede2 < 1 && alturaParede2 > 7 && larguraParede2 > 7){
-        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-    }if(alturaParede3 < 1 && larguraParede2 < 1 && alturaParede3 > 7 && larguraParede2 > 7){
-        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-    }if(alturaParede4 < 1 && larguraParede2 < 1 && alturaParede4 > 7 && larguraParede2 > 7){
-        alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-    }else {
+    
     // Variaveis que buscam o Resultado do HTML
     var resultado = document.getElementById("resultado");
     var resultado1 = document.getElementById("resultado1");
@@ -122,19 +113,32 @@ function calculaAreaParede() {
     var resultado4 = document.getElementById("resultado4");
     
     
-        // Claculo em m²
-        var totalJanela = campoJanela * janela;
-        var totalPorta = campoPorta * porta;
-        var totalAberturas = (totalJanela + totalPorta).toFixed(2);
-        var totalParede1 = campoAlturaParede1 * campoLarguraParede1;
-        var totalParede2 = campoAlturaParede2 * campoLarguraParede2;
-        var totalParede3 = campoAlturaParede3 * campoLarguraParede3;
-        var totalParede4 = campoAlturaParede4 * campoLarguraParede4;
-        var totalDas4Paredes = totalParede1 + totalParede2 + totalParede3 + totalParede4;
-        var areaTotalPintura = (totalDas4Paredes - totalAberturas).toFixed(2);
-        var quantidadeDeTinta = areaTotalPintura / 5;
-        const totalTinta = quantidadeDeTinta.toFixed(2);
+    // Claculo em m²
+    var totalJanela = campoJanela * janela;
+    var totalPorta = campoPorta * porta;
+    var totalAberturas = (totalJanela + totalPorta).toFixed(2);
+    var totalParede1 = campoAlturaParede1 * campoLarguraParede1;
+    var totalParede2 = campoAlturaParede2 * campoLarguraParede2;
+    var totalParede3 = campoAlturaParede3 * campoLarguraParede3;
+    var totalParede4 = campoAlturaParede4 * campoLarguraParede4;
+    var totalDas4Paredes = totalParede1 + totalParede2 + totalParede3 + totalParede4;
+    var areaTotalPintura = (totalDas4Paredes - totalAberturas).toFixed(2);
+    var quantidadeDeTinta = areaTotalPintura / 5;
+    const totalTinta = quantidadeDeTinta.toFixed(2);
         
+        // Condicional Altura e largura da Parede
+        if(totalParede1 < 1 && totalParede1 > 50){
+            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+        }if(totalParede2 < 1 && totalParede2 > 50){
+            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+        }if(totalParede3 < 1 && totalParede3 > 50){
+            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+        }if(totalParede4 < 1 && totalParede4 > 50){
+            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+        }else {
+            
+         
+
          while(quantidadeDeTinta > 0){
             if(quantidadeDeTinta  >= 18){
                 lata18Litros++;
@@ -153,18 +157,25 @@ function calculaAreaParede() {
                 quantidadeDeTinta = 0;
             }   
         }
-        if(lata0_5Litros == 5){
-            lata2_5Litros++;
-            lata0_5Litros = 0;
-        }
+            if(lata0_5Litros == 5){
+                lata2_5Litros++;
+                lata0_5Litros = 0;
+            }
         
-        resultado.textContent = `O total de tinta é ${totalTinta} Litros`;
+        resultado.textContent = `Você irá precisar de ${totalTinta} Litros`;
         resultado1.textContent = `Você precisará de ${lata18Litros} Lata(s) de 18 Litros`;
         resultado2.textContent = `Você precisará de ${lata3_6Litros} Lata(s) de 3,6 Litros`;
         resultado3.textContent = `Você precisará de ${lata2_5Litros} Lata(s) de 2,5 Litros`;
         resultado4.textContent = `Você precisará de ${lata0_5Litros} Lata(s) de 0,5 Litros`;
-    }     
-}    
+
+        console.log(`O total das das aberturas é ${totalAberturas} m²`);
+        console.log(`O total das 4 Paredes é ${totalDas4Paredes} m²`);
+        console.log(`A Area total daPintura é ${areaTotalPintura} m²`);
+        console.log(`O total de tinta é ${totalDas4Paredes} Litros`);
+        console.log(`O total de tinta é ${totalTinta} m²`);
+    }
+}     
+    
 
 
 /*
