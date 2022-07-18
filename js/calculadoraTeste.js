@@ -55,7 +55,6 @@ function validaParedeAltura1() {
         e1 = "Altura maior que 0"
         //return true;
     }
-
     console.log(e1);
 }
 
@@ -68,7 +67,6 @@ function validaParedeLargura1() {
         e1 = "Largura maior que 0"
         //return true;
     }
-
     console.log(e1);
 }
 
@@ -126,19 +124,25 @@ function calculaAreaParede() {
     var quantidadeDeTinta = areaTotalPintura / 5;
     const totalTinta = quantidadeDeTinta.toFixed(2);
         
+        // Condicional campo vazio
+        if(campoPorta == 0) {
+            alert("Deve ter pelo menos 1 porta em uma das Paredes.")
+        }
         // Condicional Altura e largura da Parede
-        if(totalParede1 < 1 && totalParede1 > 50){
-            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-        }if(totalParede2 < 1 && totalParede2 > 50){
-            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-        }if(totalParede3 < 1 && totalParede3 > 50){
-            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
-        }if(totalParede4 < 1 && totalParede4 > 50){
-            alert("O tamanho deve ser Maior que 1m² e/ou Menor que 50m²")
+        else if(totalParede1 < 1 || totalParede1 > 50){
+            alert("O tamanho da Parede 1 deve ser Maior que 1m² e/ou Menor que 50m²")
+        }else if(totalParede2 < 1 || totalParede2 > 50){
+            alert("O tamanho da Parede 2 deve ser Maior que 1m² e/ou Menor que 50m²")
+        }else if(totalParede3 < 1 || totalParede3 > 50){
+            alert("O tamanho da Parede 3 deve ser Maior que 1m² e/ou Menor que 50m²")
+        }else if(totalParede4 < 1 || totalParede4 > 50){
+            alert("O tamanho da Parede 4 deve ser Maior que 1m² e/ou Menor que 50m²") 
+        }
+        // Condicional tamanho paredes/aberturas
+        else if(totalDas4Paredes < totalAberturas * 2) {
+            alert("O tamanho das aberturas é Maior que 50% da Parede.")
         }else {
             
-         
-
          while(quantidadeDeTinta > 0){
             if(quantidadeDeTinta  >= 18){
                 lata18Litros++;

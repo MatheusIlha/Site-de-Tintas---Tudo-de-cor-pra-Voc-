@@ -65,6 +65,7 @@
 <p> - CSS 3 </p>
 <p> - Java Script </p>
 
-## Autores
+## Autor
 
-<p> - Matheus Xavier Ilha </p>
+| [<img src="https://avatars.githubusercontent.com/u/107053337?v=4" width=115><br><sub>Matheus Xavier Ilha</sub>](https://github.com/MatheusIlha) | 
+| :---: |
